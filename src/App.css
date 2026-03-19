@@ -1,0 +1,16 @@
+.galeria {
+  background: linear-gradient(
+    to bottom,
+    #f2d6cc,
+    #e0c2b8
+  );
+}
+
+.footer {
+  background: linear-gradient(
+    to top,
+    #8d6e73,
+    #a98a8f,
+    #e0c2b8
+  );
+}

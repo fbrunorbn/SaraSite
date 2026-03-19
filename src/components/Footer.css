@@ -1,0 +1,68 @@
+.footer {
+  padding: 10px 20px 100px;
+  text-align: center;
+
+  background: linear-gradient(
+    to top,
+    #8d6e73,
+    #a98a8f,
+    #f2d6cc
+  );
+}
+
+/* container */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* logo */
+.footer-logo {
+  width: 80px;
+  opacity: 0.9;
+}
+
+/* nome */
+.footer-nome {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: white;
+}
+
+/* instagram */
+.footer-insta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: white;
+
+  font-size: 14px;
+
+  padding: 8px 16px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  transition: 0.3s;
+}
+
+.footer-insta:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* icone */
+.icon {
+  font-size: 16px;
+}
+
+/* direitos */
+.footer-copy {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+}
