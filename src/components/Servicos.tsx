@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./Servicos.css";
 
@@ -25,74 +25,6 @@ const servicos = [...servicosBase, ...servicosBase];
 export default function Servicos() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const totalWidth = container.scrollWidth / 2;
-
-    let scrollAmount = totalWidth / 2;
-    let isInteracting = false;
-
-    container.scrollLeft = scrollAmount;
-
-    const autoScroll = () => {
-      if (isInteracting) return;
-
-      scrollAmount += 0.3;
-      container.scrollLeft = scrollAmount;
-
-      // 🔥 loop infinito invisível
-      if (scrollAmount >= totalWidth) {
-        scrollAmount = totalWidth / 2;
-        container.scrollLeft = scrollAmount;
-      }
-
-      if (scrollAmount <= 0) {
-        scrollAmount = totalWidth / 2;
-        container.scrollLeft = scrollAmount;
-      }
-    };
-
-    const interval = setInterval(autoScroll, 16);
-
-    const handleUserScroll = () => {
-      scrollAmount = container.scrollLeft;
-
-      if (scrollAmount >= totalWidth) {
-        scrollAmount = totalWidth / 2;
-        container.scrollLeft = scrollAmount;
-      }
-
-      if (scrollAmount <= 0) {
-        scrollAmount = totalWidth / 2;
-        container.scrollLeft = scrollAmount;
-      }
-    };
-
-    const startInteraction = () => (isInteracting = true);
-    const stopInteraction = () => (isInteracting = false);
-
-    container.addEventListener("scroll", handleUserScroll);
-    container.addEventListener("touchstart", startInteraction);
-    container.addEventListener("mousedown", startInteraction);
-
-    container.addEventListener("touchend", stopInteraction);
-    container.addEventListener("mouseup", stopInteraction);
-    container.addEventListener("mouseleave", stopInteraction);
-
-    return () => {
-      clearInterval(interval);
-
-      container.removeEventListener("scroll", handleUserScroll);
-      container.removeEventListener("touchstart", startInteraction);
-      container.removeEventListener("mousedown", startInteraction);
-      container.removeEventListener("touchend", stopInteraction);
-      container.removeEventListener("mouseup", stopInteraction);
-      container.removeEventListener("mouseleave", stopInteraction);
-    };
-  }, []);
 
   const handleScroll = () => {
     if (!containerRef.current) return;

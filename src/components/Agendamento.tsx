@@ -21,7 +21,7 @@ export default function Agendamento() {
 📅 Dia: ${form.dia}
 💅 Serviço: ${form.servico}`;
 
-    const url = `https://ig.me/m/fbrunorn?text=${encodeURIComponent(mensagem)}`;
+    const url = `https://ig.me/m/saralimanailsdesigne?text=${encodeURIComponent(mensagem)}`;
     window.open(url, "_blank");
   };
 

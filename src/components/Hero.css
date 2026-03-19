@@ -21,6 +21,10 @@
   );
 }
 
+.hero img {
+  animation: float 6s ease-in-out infinite;
+}
+
 
 /* botão estilo Apple */
 .scroll-btn {

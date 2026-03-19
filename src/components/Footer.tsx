@@ -20,7 +20,7 @@ export default function Footer() {
 
         {/* INSTAGRAM */}
         <a
-          href="https://instagram.com/fbrunorn"
+          href="https://instagram.com/saralimanailsdesigne"
           target="_blank"
           className="footer-insta"
         >

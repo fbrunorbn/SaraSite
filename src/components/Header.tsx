@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import "./Header.css";
 
+
 export default function Header() {
+  
   return (
     <motion.header
       className="header"
